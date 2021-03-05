@@ -1,0 +1,59 @@
+[
+    {
+        "id": 1,
+        "title":"Игорь Демьяненко",
+        "text":"Product Designer",
+        "socLinks":[
+            {
+                "name": "instagram",
+                "image":"./images/sprite.svg#command-card-instagram-1",
+                "href":"https://www.instagram.com"
+            },
+            {
+                "name": "twitter",
+                "image":"./images/sprite.svg#command-card-twitter-2",
+                "href":"https://twitter.com"
+            },
+            {
+                "name": "facebook",
+                "image":"./images/sprite.svg#command-card-facebook-3",
+                "href":"https://facebook.com"
+            },
+            {
+                "name": "linkedin",
+                "image":"./images/sprite.svg#command-card-linkedin-4",
+                "href":"https://linkedin.com"
+            }
+        ],
+        "picture": {
+        "webp": {
+          "mobile": [
+            "./images/comand-1-450img@1x.webp",
+            "./images/comand-1-450img@2x.webp"
+          ],
+          "tablet": [
+            "./images/comand-1-354img@1x.webp",
+            "./images/comand-1-354img@2x.webp"
+          ],
+          "desktop": [
+            "./images/comand-1-270img@1x.webp",
+            "./images/comand-1-270img@2x.webp"
+          ]
+        },
+        "jpg": {
+          "mobile": [
+            "./images/comand-1-450img@1x.jpg",
+            "./images/comand-1-450img@2x.jpg"
+          ],
+          "tablet": [
+            "./images/comand-1-354img@1x.jpg",
+            "./images/comand-1-354img@2x.jpg"
+          ],
+          "desktop": [
+            "./images/comand-1-270img@1x.jpg",
+            "./images/comand-1-270img@2x.jpg"
+          ]
+        }
+      }
+    }
+]

@@ -12,6 +12,7 @@ const mailingPath = path.join(__dirname, "./db/mailing.json");
 const formPath = path.join(__dirname, "./db/form.json");
 const advantagesPath = path.join(__dirname, "./db/advantages.json");
 const clientsPath = path.join(__dirname, "./db/clients.json");
+const commandPath = path.join(__dirname, "./db/command.json");
 const PORT = process.env.PORT || 3003;
 
 app.use(express.urlencoded({ extended: true })) //дає можливість зчитувати body в req.body.title// Parse URL-encoded bodies (as sent by HTML forms)
@@ -23,6 +24,16 @@ app.get('/advantages', async (req, res) => {
         const data = await fsProm.readFile(advantagesPath, "utf-8");
         const advantages = JSON.parse(data);
         res.status(200).send(advantages);
+    } catch (err) {
+        return console.error(err.message);
+    }
+})
+
+app.get('/command', async (req, res) => {
+    try {
+        const data = await fsProm.readFile(commandPath, "utf-8");
+        const command = JSON.parse(data);
+        res.status(200).send(command);
     } catch (err) {
         return console.error(err.message);
     }
