@@ -36,6 +36,16 @@ app.get('/types', async (req, res) => {
     }
 })
 
+app.get('/mailing', async (req, res) => {
+    try {
+        const data = await fsProm.readFile(mailingPath, "utf-8");
+        const emailList = JSON.parse(data);
+        res.status(200).send(emailList);
+    } catch (err) {
+        return console.error(err.message);
+    }
+})
+
 app.post('/mailing', async (req, res) => {
     try {
         const newEmail = { email: req.body.email, id: shortid.generate() };
