@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "image":"./images/sprite.svg#clients-logo-1",
+        "href":"#!",
+        "width":"44",
+        "height":"49"
+    },
+    {
+        "id": 2,
+        "image":"./images/sprite.svg#clients-logo-2",
+        "href":"#!",
+        "width":"40",
+        "height":"52"
+    },
+    {
+        "id": 3,
+        "image":"./images/sprite.svg#clients-logo-3",
+        "href":"#!",
+        "width":"41",
+        "height":"43"
+    },
+    {
+        "id": 4,
+        "image":"./images/sprite.svg#clients-logo-4",
+        "href":"#!",
+        "width":"80",
+        "height":"42"
+    },
+    {
+        "id": 5,
+        "image":"./images/sprite.svg#clients-logo-5",
+        "href":"#!",
+        "width":"59",
+        "height":"47"
+    },
+    {
+        "id": 6,
+        "image":"./images/sprite.svg#clients-logo-6",
+        "href":"#!",
+        "width":"88",
+        "height":"45"
+    }
+]
