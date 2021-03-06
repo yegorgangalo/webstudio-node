@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "title": "Десктопные приложения",
+        "alt": "Программируем",
+        "picture": {
+        "webp": ["./images/work-1-img-370@1x.webp", "./images/work-1-img-370@2x.webp", "./images/work-1-img-370@3x.webp"],
+        "jpg": ["./images/work-1-img-370@1x.jpg", "./images/work-1-img-370@2x.jpg", "./images/work-1-img-370@3x.jpg"]
+      }
+    },
+    {
+        "id": 2,
+        "title": "Мобильные приложения",
+        "alt": "Верстаем",
+        "picture": {
+        "webp": ["./images/work-2-img-370@1x.webp", "./images/work-2-img-370@2x.webp", "./images/work-2-img-370@3x.webp"],
+        "jpg": ["./images/work-2-img-370@1x.jpg", "./images/work-2-img-370@2x.jpg", "./images/work-2-img-370@3x.jpg"]
+      }
+    },
+    {
+        "id": 3,
+        "title": "Дизайнерские решения",
+        "alt": "Рисуем",
+        "picture": {
+        "webp": ["./images/work-3-img-370@1x.webp", "./images/work-3-img-370@2x.webp", "./images/work-3-img-370@3x.webp"],
+        "jpg": ["./images/work-3-img-370@1x.jpg", "./images/work-3-img-370@2x.jpg", "./images/work-3-img-370@3x.jpg"]
+      }
+    }
+]
