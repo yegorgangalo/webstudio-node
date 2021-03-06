@@ -55,5 +55,176 @@
           ]
         }
       }
+    },
+    {
+        "id": 2,
+        "title":"Ольга Репина",
+        "text":"Frontend Developer",
+        "socLinks":[
+            {
+                "name": "instagram",
+                "image":"./images/sprite.svg#command-card-instagram-1",
+                "href":"https://www.instagram.com"
+            },
+            {
+                "name": "twitter",
+                "image":"./images/sprite.svg#command-card-twitter-2",
+                "href":"https://twitter.com"
+            },
+            {
+                "name": "facebook",
+                "image":"./images/sprite.svg#command-card-facebook-3",
+                "href":"https://facebook.com"
+            },
+            {
+                "name": "linkedin",
+                "image":"./images/sprite.svg#command-card-linkedin-4",
+                "href":"https://linkedin.com"
+            }
+        ],
+        "picture": {
+        "webp": {
+          "mobile": [
+            "./images/comand-2-450img@1x.webp",
+            "./images/comand-2-450img@2x.webp"
+          ],
+          "tablet": [
+            "./images/comand-2-354img@1x.webp",
+            "./images/comand-2-354img@2x.webp"
+          ],
+          "desktop": [
+            "./images/comand-2-270img@1x.webp",
+            "./images/comand-2-270img@2x.webp"
+          ]
+        },
+        "jpg": {
+          "mobile": [
+            "./images/comand-2-450img@1x.jpg",
+            "./images/comand-2-450img@2x.jpg"
+          ],
+          "tablet": [
+            "./images/comand-2-354img@1x.jpg",
+            "./images/comand-2-354img@2x.jpg"
+          ],
+          "desktop": [
+            "./images/comand-2-270img@1x.jpg",
+            "./images/comand-2-270img@2x.jpg"
+          ]
+        }
+      }
+    },
+    {
+        "id": 3,
+        "title":"Николай Тарасов",
+        "text":"Marketing",
+        "socLinks":[
+            {
+                "name": "instagram",
+                "image":"./images/sprite.svg#command-card-instagram-1",
+                "href":"https://www.instagram.com"
+            },
+            {
+                "name": "twitter",
+                "image":"./images/sprite.svg#command-card-twitter-2",
+                "href":"https://twitter.com"
+            },
+            {
+                "name": "facebook",
+                "image":"./images/sprite.svg#command-card-facebook-3",
+                "href":"https://facebook.com"
+            },
+            {
+                "name": "linkedin",
+                "image":"./images/sprite.svg#command-card-linkedin-4",
+                "href":"https://linkedin.com"
+            }
+        ],
+        "picture": {
+        "webp": {
+          "mobile": [
+            "./images/comand-3-450img@1x.webp",
+            "./images/comand-3-450img@2x.webp"
+          ],
+          "tablet": [
+            "./images/comand-3-354img@1x.webp",
+            "./images/comand-3-354img@2x.webp"
+          ],
+          "desktop": [
+            "./images/comand-3-270img@1x.webp",
+            "./images/comand-3-270img@2x.webp"
+          ]
+        },
+        "jpg": {
+          "mobile": [
+            "./images/comand-3-450img@1x.jpg",
+            "./images/comand-3-450img@2x.jpg"
+          ],
+          "tablet": [
+            "./images/comand-3-354img@1x.jpg",
+            "./images/comand-3-354img@2x.jpg"
+          ],
+          "desktop": [
+            "./images/comand-3-270img@1x.jpg",
+            "./images/comand-3-270img@2x.jpg"
+          ]
+        }
+      }
+    },
+    {
+        "id": 4,
+        "title":"Михаил Ермаков",
+        "text":"UI Designer",
+        "socLinks":[
+            {
+                "name": "instagram",
+                "image":"./images/sprite.svg#command-card-instagram-1",
+                "href":"https://www.instagram.com"
+            },
+            {
+                "name": "twitter",
+                "image":"./images/sprite.svg#command-card-twitter-2",
+                "href":"https://twitter.com"
+            },
+            {
+                "name": "facebook",
+                "image":"./images/sprite.svg#command-card-facebook-3",
+                "href":"https://facebook.com"
+            },
+            {
+                "name": "linkedin",
+                "image":"./images/sprite.svg#command-card-linkedin-4",
+                "href":"https://linkedin.com"
+            }
+        ],
+        "picture": {
+        "webp": {
+          "mobile": [
+            "./images/comand-4-450img@1x.webp",
+            "./images/comand-4-450img@2x.webp"
+          ],
+          "tablet": [
+            "./images/comand-4-354img@1x.webp",
+            "./images/comand-4-354img@2x.webp"
+          ],
+          "desktop": [
+            "./images/comand-4-270img@1x.webp",
+            "./images/comand-4-270img@2x.webp"
+          ]
+        },
+        "jpg": {
+          "mobile": [
+            "./images/comand-4-450img@1x.jpg",
+            "./images/comand-4-450img@2x.jpg"
+          ],
+          "tablet": [
+            "./images/comand-4-354img@1x.jpg",
+            "./images/comand-4-354img@2x.jpg"
+          ],
+          "desktop": [
+            "./images/comand-4-270img@1x.jpg",
+            "./images/comand-4-270img@2x.jpg"
+          ]
+        }
+      }
     }
 ]
