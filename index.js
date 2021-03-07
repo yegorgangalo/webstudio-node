@@ -2,6 +2,7 @@ const path = require('path');
 const express = require('express');
 const cors = require('cors');
 const { getData, postData } = require('./api/apilogic');
+const { validateMailing, validateForm } = require('./api/validation');
 
 const app = express();
 const PORT = process.env.PORT || 3003;
@@ -28,8 +29,8 @@ app.get('/types', getData(typesPath));
 app.get('/mailing', getData(mailingPath));
 app.get('/form', getData(formPath));
 
-app.post('/mailing', postData(mailingPath));
-app.post('/form', postData(formPath));
+app.post('/mailing', validateMailing, postData(mailingPath));
+app.post('/form', validateForm, postData(formPath));
 
 app.listen(PORT, () => {
             console.log("starting listening on port", PORT);

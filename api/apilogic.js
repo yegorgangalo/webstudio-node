@@ -12,10 +12,10 @@ const getData = (path) => async (req, res, next) => {
     }
 }
 
-const postData = (path) => async (req, res) => {
+const postData = (path) => async (req, res, next) => {
     try {
+        console.log(req.body);
         const newData = { ...req.body, id: shortid.generate() };
-        console.log('newData',newData);
         const data = await fsProm.readFile(path, "utf-8");
         const oldData = JSON.parse(data);
         oldData.push(newData);
