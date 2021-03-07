@@ -1,6 +1,5 @@
 const shortid = require('shortid');
-const fs = require('fs');
-const fsProm = fs.promises;
+const fsProm = require('fs/promises');
 
 const getData = (path) => async (req, res, next) => {
     try {
@@ -15,8 +14,6 @@ const getData = (path) => async (req, res, next) => {
 
 const postData = (path) => async (req, res) => {
     try {
-        console.log('post data');
-        // console.log('req.body=',req.body);
         const newData = { ...req.body, id: shortid.generate() };
         console.log('newData',newData);
         const data = await fsProm.readFile(path, "utf-8");

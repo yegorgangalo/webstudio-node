@@ -1,12 +1,9 @@
 const path = require('path');
-const fs = require('fs');
 const express = require('express');
 const cors = require('cors');
-// const shortid = require('shortid');
 const { getData, postData } = require('./api/apilogic');
 
 const app = express();
-const fsProm = fs.promises;
 const PORT = process.env.PORT || 3003;
 
 const examplesPath = path.join(__dirname, "./db/examples.json");
@@ -33,49 +30,6 @@ app.get('/form', getData(formPath));
 
 app.post('/mailing', postData(mailingPath));
 app.post('/form', postData(formPath));
-
-// app.post('/mailing', async (req, res) => {
-//     try {
-//         const newEmail = { email: req.body.email, id: shortid.generate() };
-//         const data = await fsProm.readFile(mailingPath, "utf-8");
-//         const emailList = JSON.parse(data);
-//         emailList.push(newEmail);
-//         await fsProm.writeFile(
-//             mailingPath,
-//             JSON.stringify(emailList, null, 2),
-//             "utf-8",
-//             (err) => {
-//                 if (err) throw err;
-//             }
-//         )
-//         res.status(201).send(newEmail);
-//     } catch (err) {
-//         res.status(400).send('error');
-//         return console.error(err.message);
-//     }
-// })
-
-// app.post('/form', async (req, res) => {
-//     try {
-//         const newClient = {...req.body, id: shortid.generate() };
-//         const data = await fsProm.readFile(formPath, "utf-8");
-//         const clientList = JSON.parse(data);
-//         clientList.push(newClient);
-//         await fsProm.writeFile(
-//             formPath,
-//             JSON.stringify(clientList, null, 2),
-//             "utf-8",
-//             (err) => {
-//                 if (err) throw err;
-//             }
-//         )
-
-//         res.status(201).send(newClient);
-//     } catch (err) {
-//         res.status(400).send('error');
-//         return console.error(err.message);
-//     }
-// })
 
 app.listen(PORT, () => {
             console.log("starting listening on port", PORT);
