@@ -34,6 +34,16 @@ const postData = (path) => async (req, res, next) => {
     }
 }
 
+const getDataMongo = (Model) => async (req, res) => {
+    try {
+        const allData = await Model.find({})
+        res.send(allData);
+    } catch (err) {
+        res.status(400).send(err);
+        return console.error(err);
+    }
+}
+
 const postDataMongo = (Model) => async (req, res) => {
     try {
         const newData = new Model({ ...req.body })
@@ -45,4 +55,4 @@ const postDataMongo = (Model) => async (req, res) => {
     }
 }
 
-module.exports = { getData, postData, postDataMongo }
+module.exports = { getData, postData, getDataMongo, postDataMongo }
