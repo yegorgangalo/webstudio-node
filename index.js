@@ -1,7 +1,9 @@
 const path = require('path');
 const express = require('express');
 const cors = require('cors');
-const { getData, postData } = require('./api/apilogic');
+const mongoose = require('mongoose')
+const {MailModel, FormModel} = require('./models/models')
+const { getData, postData, postDataMongo } = require('./api/apilogic');
 const { validateMailing, validateForm } = require('./api/validation');
 
 const app = express();
@@ -29,9 +31,32 @@ app.get('/types', getData(typesPath));
 app.get('/mailing', getData(mailingPath));
 app.get('/form', getData(formPath));
 
-app.post('/mailing', validateMailing, postData(mailingPath));
-app.post('/form', validateForm, postData(formPath));
+// app.post('/mailing', validateMailing, postData(mailingPath));
+// app.post('/form', validateForm, postData(formPath));
 
-app.listen(PORT, () => {
-            console.log("starting listening on port", PORT);
-        })
+// app.listen(PORT, () => {
+//             console.log("starting listening on port", PORT);
+// })
+
+app.post('/mailing', postDataMongo(MailModel))
+app.post('/form', postDataMongo(FormModel))
+
+async function start() {
+  try {
+    await mongoose.connect(
+      'mongodb+srv://Yegor:123qwe@cluster0.ol3vz.mongodb.net/mailing',
+        {
+            useUnifiedTopology: true,
+            useNewUrlParser: true,
+            useFindAndModify: false
+        }
+    )
+    app.listen(PORT, () => {
+      console.log('Server has been started...')
+    })
+  } catch (e) {
+    console.log(e)
+  }
+}
+
+start()

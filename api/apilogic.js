@@ -5,9 +5,9 @@ const getData = (path) => async (req, res, next) => {
     try {
         const data = await fsProm.readFile(path, "utf-8");
         const parsedData = JSON.parse(data);
-        console.log('parsedData=',parsedData);
         res.status(200).send(parsedData);
     } catch (err) {
+        res.status(400).send(err);
         return console.error(err.message);
     }
 }
@@ -34,4 +34,15 @@ const postData = (path) => async (req, res, next) => {
     }
 }
 
-module.exports = { getData, postData }
+const postDataMongo = (Model) => async (req, res) => {
+    try {
+        const newData = new Model({ ...req.body })
+        await newData.save();
+        res.status(201).send(newData);
+    } catch (err) {
+        res.status(400).send(err);
+        return console.error(err);
+    }
+}
+
+module.exports = { getData, postData, postDataMongo }
