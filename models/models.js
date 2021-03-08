@@ -13,17 +13,17 @@ const formSchema = new Schema({
     required: [true, 'is required'],
     minlength: [5, 'Min length 5 characters'],
     maxlength: [30, 'Max length 30 characters'],
-    validate: (text) => /^[a-zA-ZА-Яа-яЁёієґї\s]+$/i.test(text)
+    match: /^[a-zA-ZА-Яа-яЁёієґї\s]+$/i
   },
   tel: {
     type: Number,
     required: [true, 'is required'],
-    validate: (number) => /^380[0-9]{9}(\s*)?$/.test(number)
+    match: /^380[0-9]{9}(\s*)?$/
   },
   email: {
     type: String,
     required: [true, 'is required'],
-    validate: (mail) => /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/.test(mail)
+    match: /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/
   },
   message: {
     type: String,
